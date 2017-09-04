@@ -1,0 +1,21 @@
+<div class="container">
+	<h1>Calculator</h1>
+
+	<input id="num1" type="string" class="textField" name="num1" [(ngModel)]="num1" >
+	<br>
+
+	<div class="buttons">
+		<button (click)="add()" [ngClass]="{'active':(operation == 'ADD')}">+</button>
+		<button (click)="subtract()" [ngClass]="{'active':(operation == 'SUBTRACT')}">-</button>
+		<button (click)="multiply()" [ngClass]="{'active':(operation == 'MULTIPLY')}">x</button>
+		<button (click)="divide()" [ngClass]="{'active':(operation == 'DIVIDE')}">/</button>
+	</div>
+
+	<br>
+
+	<input id="num2" type="string" class="textField" name="num2" [(ngModel)]="num2" >
+
+
+	<h2 class="resultLabel">{{result}}</h2>
+
+</div>
